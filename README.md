@@ -21,7 +21,7 @@ Untuk menjalankan dan mengembangkan proyek ini di komputer lokal Anda, ikuti lan
 
 1. **Clone Repositori:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/milkiainunistaufan/scarecroft-indonesia.git
    cd scarecroft-indonesia
    ```
 
