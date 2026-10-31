@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Menggantikan fungsi darkMode: 'class' di Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Menetapkan font sans-serif untuk utility Tailwind */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --color-florest-main: #0A4D68;
+  --color-florest-secondary: #D97706;
+  --color-florest-contrast: #FEF3C7;
+  --color-florest-light: #FBFBF9;
+  --color-florest-dark: #0B1315;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Kustomisasi tambahan dot pagination dan transisi */
+.swiper-pagination-bullet-active {
+  background: var(--color-florest-main) !important;
+}
+
+/* Animasi Khusus Logo: Melompat dari atas, lalu bergeser ke kiri teks */
+@keyframes logoIntro {
+  0% {
+    transform: translate(110px, -150px) scale(1.5) rotate(-20deg);
+    opacity: 0;
+  }
+  40% {
+    transform: translate(110px, 0px) scale(0.9) rotate(0deg); /* Jatuh/melompat ke tengah */
+    opacity: 1;
+  }
+  65% {
+    transform: translate(110px, -15px) scale(1.05); /* Memantul ke atas sedikit */
+  }
+  85% {
+    transform: translate(110px, 0px) scale(1); /* Mendarat kembali di tengah */
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1); /* Meluncur mulus ke posisi kiri aslinya */
+  }
+}
+
+/* Animasi Khusus Teks: Muncul memudar setelah logo selesai mendarat */
+@keyframes textIntro {
+  0%, 75% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Daftarkan class utilitas ke dalam CSS Anda */
+.animate-logo-cinematic {
+  animation: logoIntro 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-text-cinematic {
+  animation: textIntro 1.8s ease-out forwards;
+}
