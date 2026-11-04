@@ -56,7 +56,7 @@ async function loadPortfolios() {
         <div class="portfolio-item group relative flex flex-col bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-xs hover:shadow-xl hover:shadow-florest-main/5 dark:hover:shadow-black/30 transition-all duration-300 hover:border-florest-main/30">
           <div class="relative aspect-video bg-linear-to-br from-florest-main/20 to-florest-secondary/20 overflow-hidden flex items-center justify-center">
             <div class="relative aspect-video w-full overflow-hidden flex items-center justify-center bg-slate-100">
-                <img src="${project.image_url}" alt="${project.title}" class="w-full h-full object-cover" onerror="this.src='./public/rmw.png';" />
+                <img src="${project.image_url}" alt="${project.title}" class="w-full h-full object-cover" " />
             </div>
           </div>
           <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
