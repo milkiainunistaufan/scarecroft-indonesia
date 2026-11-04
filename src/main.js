@@ -1,7 +1,7 @@
 import './style.css'
 import logoImg from './assets/scarecroft.png'
 
-console.log("ScarecrowByte Indonesia is active!");
+console.log("ScareCroft Indonesia is active!");
 document.getElementById('logo-agency').src = logoImg;
 document.getElementById('logo-hero').src = logoImg;
 

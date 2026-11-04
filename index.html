@@ -277,7 +277,7 @@
         <div class="w-full h-px bg-florest-main/20 dark:bg-white/10"></div>
         <!-- SECTION PORTOFOLIO -->
         <section id="portofolio" class="max-w-full border-t border-slate-200/50 dark:border-slate-800/80 bg-florest-light dark:bg-florest-dark mx-auto px-6 py-20 md:py-28 transition-colors duration-300">
-          <div class="max-w-7xl mx-auto">
+          <div class="max-w-7xl mx-auto relative group/slider">
             
             <!-- Judul Seksi -->
             <h2 class="font-display text-3xl md:text-4xl font-extrabold text-center mb-4 text-florest-main dark:text-white tracking-tight">
@@ -287,119 +287,107 @@
               Berikut adalah beberapa landing page, sistem internal, dan aplikasi kustom yang telah sukses kami kembangkan untuk klien kami.
             </p>
             
-            <!-- Grid Kartu Portofolio -->
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-              
-              <!-- Proyek 1: Landing Page Ekosistem UMKM (Representasi Tailwind CSS) -->
-              <div class="group relative flex flex-col bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-xs hover:shadow-xl hover:shadow-florest-main/5 dark:hover:shadow-black/30 transition-all duration-300 hover:border-florest-main/30">
-                <!-- Area Gambar/Cover Mockup -->
-                <div class="relative aspect-video bg-linear-to-br from-florest-main/20 to-florest-secondary/20 overflow-hidden flex items-center justify-center">
-                  <!-- Ganti src dengan screenshot mockup project Anda jika sudah ada -->
-                  <div class="absolute inset-0 dark:bg-florest-dark/40 dark:opacity-80 group-hover:scale-105 transition-transform duration-500">
-                    <img src="./public/rmw.png" alt="Hero PT RMW DIPTA NUSANTARA" class="w-full h-full object-cover" />
-                  </div>
-                </div>
-                
-                <!-- Detail Konten Proyek -->
-                <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span class="text-[10px] font-bold uppercase tracking-wider bg-florest-main/10 dark:bg-florest-main/20 text-florest-main dark:text-slate-300 px-2.5 py-1 rounded-md">Tailwind CSS</span>
-                      <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-florest-secondary px-2.5 py-1 rounded-md">Sheets DB</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-florest-main dark:text-white mb-2 group-hover:text-florest-secondary transition-colors duration-300">
-                      PT RMW DIPTA NUSANTARA — Distributor & Pemasaran
-                    </h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                      Landing page berbasis Tailwind CSS yang menampilkan katalog produk, dan sistem pemesanan via WhatsApp otomatis.
-                    </p>
-                  </div>
-                  
-                  <!-- Tombol Aksi Kunjungan -->
-                  <a href="https://ptrmwdiptanusantara.vercel.app" target="_blank" class="flex items-center text-sm font-bold text-florest-main dark:text-florest-secondary gap-2 group/btn">
-                    <span>Visit PT RMW DIPTA NUSANTARA</span>
-                    <svg class="h-4 w-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+            <!-- Wrapper Slider Kontroler Luar -->
+            <div class="relative overflow-hidden px-2 py-4">
+              <!-- Track Slider Dinamis (Grid 3 Kolom pada Layar Lebar) -->
+              <div id="portfolio-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 transition-transform duration-500 ease-out">
+                <!-- Loading State Ringan -->
+                <div class="col-span-full text-center py-10 text-slate-500 dark:text-slate-400 text-sm font-medium">
+                  Memuat portofolio proyek...
                 </div>
               </div>
-
-              <!-- Proyek 2: Sistem Inventaris Gudang (Representasi Laravel) -->
-              <div class="group relative flex flex-col bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-xs hover:shadow-xl hover:shadow-florest-main/5 dark:hover:shadow-black/30 transition-all duration-300 hover:border-florest-main/30">
-                <!-- Area Gambar/Cover Mockup -->
-                <div class="relative aspect-video bg-linear-to-br from-florest-main/20 to-florest-secondary/20 overflow-hidden flex items-center justify-center">
-                  <!-- Ganti src dengan screenshot mockup project Anda jika sudah ada -->
-                  <div class="absolute inset-0 dark:bg-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
-                    <img src="./public/equally-healthy.PNG" alt="Sistem Inventaris Gudang" class="w-full h-full object-cover" />
-                  </div>
-                  <!-- <span class="relative font-display font-bold text-sm tracking-wider text-florest-main dark:text-slate-400 uppercase bg-white/80 dark:bg-slate-900/80 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700">
-                    Comming soon
-                  </span> -->
-                </div>
-                
-                <!-- Detail Konten Proyek -->
-                <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span class="text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-md">Laravel</span>
-                      <span class="text-[10px] font-bold uppercase tracking-wider bg-florest-main/10 dark:bg-florest-main/20 text-florest-main dark:text-slate-300 px-2.5 py-1 rounded-md">PostgreSQL</span>
-                      <span class="text-[10px] font-bold uppercase tracking-wider bg-[#58C4DC] dark:bg-florest-main/90 text-florest-main dark:text-slate-300 px-2.5 py-1 rounded-md">React JS</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-florest-main dark:text-white mb-2 group-hover:text-florest-secondary transition-colors duration-300">
-                      Sistem Informasi Kesehatan — bridging satusehat & BPJS berbasis Laravel, PostgreSQL dan React JS
-                    </h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                      Sistem internal berbasis Laravel dan React JS yang mengintegrasikan data kesehatan dari satusehat dan BPJS untuk mempermudah manajemen data pasien dan layanan kesehatan.
-                    </p>
-                  </div>
-                  
-                  <!-- Tombol Aksi Kunjungan -->
-                  <div class="flex items-center text-sm font-bold text-florest-main dark:text-florest-secondary gap-2 group/btn">
-                    <span>Comming Soon</span>
-                    <!-- <svg class="h-4 w-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg> -->
-                  </div>
-                </div>
-              </div>
-
             </div>
+
+            <!-- Tombol Navigasi Slider Dinamis (Hanya Muncul jika Data > Tampilan Layar) -->
+            <div id="slider-nav" class="hidden">
+              <!-- Tombol Prev -->
+              <button id="slider-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-white p-3 rounded-full shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition active:scale-95 cursor-pointer z-20">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <!-- Tombol Next -->
+              <button id="slider-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-white p-3 rounded-full shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition active:scale-95 cursor-pointer z-20">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Indikator Titik (Dots) -->
+            <div id="slider-dots" class="flex justify-center gap-2 mt-10"></div>
+
           </div>
         </section>
+
         <div class="w-full h-px bg-florest-main/20 dark:bg-white/10"></div>
         <!-- 1. SEKSI KONTAK / CALL TO ACTION (CTA) -->
-        <section id="kontak" class="relative max-w-full py-20 px-6 text-center overflow-hidden bg-florest-light dark:bg-florest-dark transition-colors duration-300">
-          
-          <!-- Efek Ambient Glow Halus di Area Kontak -->
+        <section id="kontak" class="relative max-w-full py-20 px-6 overflow-hidden bg-florest-light dark:bg-florest-dark transition-colors duration-300">
+          <!-- Efek Ambient Glow Halus -->
           <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-125 h-75 bg-florest-main/5 dark:bg-florest-secondary/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-          <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+          <div class="max-w-2xl mx-auto space-y-8 relative z-10">
             <!-- Judul Ajakan -->
-            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-florest-main dark:text-white tracking-tight">
-              Siap Memulai Proyek Anda?
-            </h2>
+            <div class="text-center space-y-4">
+              <h2 class="font-display text-3xl md:text-4xl font-extrabold text-florest-main dark:text-white tracking-tight">
+                Siap Memulai Proyek Anda?
+              </h2>
+              <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
+                Konsultasikan kebutuhan website, landing page, atau sistem aplikasi bisnis Anda bersama tim pengembang kami secara gratis tanpa dipungut biaya.
+              </p>
+            </div>
             
-            <!-- Deskripsi Sub-CTA -->
-            <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-              Konsultasikan kebutuhan website, landing page, atau sistem aplikasi bisnis Anda bersama tim pengembang kami secara gratis tanpa dipungut biaya.
-            </p>
-            
+            <!-- FORM INTERAKTIF KE SUPABASE -->
+            <form id="contact-form" class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 p-6 md:p-8 rounded-3xl shadow-xs space-y-5 text-left max-w-xl mx-auto">
+              <div>
+                <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                <input type="text" id="contact-name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent text-sm text-slate-800 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-florest-main/20 dark:focus:ring-florest-secondary/20 focus:border-florest-main dark:focus:border-florest-secondary transition" placeholder="Masukkan nama Anda">
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Email</label>
+                  <input type="email" id="contact-email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent text-sm text-slate-800 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-florest-main/20 dark:focus:ring-florest-secondary/20 focus:border-florest-main dark:focus:border-florest-secondary transition" placeholder="nama@email.com">
+                </div>
+                <div>
+                  <label for="contact-whatsapp" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Nomor WhatsApp</label>
+                  <input type="tel" id="contact-whatsapp" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent text-sm text-slate-800 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-florest-main/20 dark:focus:ring-florest-secondary/20 focus:border-florest-main dark:focus:border-florest-secondary transition" placeholder="08xxxxxxxxx">
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Detail Kebutuhan Projek</label>
+                <textarea id="contact-message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent text-sm text-slate-800 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-florest-main/20 dark:focus:ring-florest-secondary/20 focus:border-florest-main dark:focus:border-florest-secondary transition" placeholder="Jelaskan secara singkat jenis website atau aplikasi yang ingin Anda bangun..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-linear-to-r from-florest-main to-florest-secondary dark:from-florest-main dark:to-slate-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:opacity-90 transition active:scale-98 text-sm flex items-center justify-center gap-2 cursor-pointer">
+                <span>Kirim Pesan Konsultasi</span>
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+
+            <!-- Pembatas / Jalur Alternatif -->
+            <div class="relative flex py-4 items-center max-w-xl mx-auto">
+              <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+              <span class="flex-shrink mx-4 text-xs font-semibold text-slate-400 uppercase tracking-widest">atau hubungi langsung</span>
+              <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+            </div>
+
             <!-- Tombol WhatsApp Menggunakan Warna Amber yang Sangat Klik-able -->
-            <div class="pt-4 w-full md:max-w-xs mx-auto">
-              <!-- Tombol WhatsApp Interaktif Premium -->
+            <div class="w-full md:max-w-xs mx-auto">
               <a href="https://wa.me/6282331497724" target="_blank" class="flex items-center justify-between bg-emerald-600 hover:bg-emerald-700 text-white p-5 rounded-xl shadow-md group transition duration-300">
                 <div class="flex items-center gap-4">
-                    <!-- Icon WhatsApp SVG -->
-                    <div class="bg-white/20 p-3 rounded-lg group-hover:scale-110 transition duration-300">
+                  <div class="bg-white/20 p-3 rounded-lg group-hover:scale-110 transition duration-300">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.006 5.219 5.232.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.198 2.203 3.405 5.126 3.402 8.232-.006 6.425-5.232 11.644-11.64 11.644-2.007-.001-3.982-.519-5.734-1.505L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.236 0 9.5-4.267 9.504-9.506.002-2.538-.987-4.925-2.787-6.726-1.8-1.801-4.19-2.793-6.729-2.793-5.245 0-9.512 4.268-9.517 9.507-.002 1.706.45 3.374 1.309 4.841L1.93 22.125l4.717-1.971zm10.598-6.136c-.294-.147-1.743-.86-2.012-.958-.269-.099-.465-.147-.659.148-.196.294-.753.958-.923 1.153-.17.196-.341.221-.635.074-1.8-.902-2.96-1.517-4.13-3.525-.31-.533.31-.495.89-1.646.099-.197.049-.369-.025-.517-.073-.148-.659-1.591-.903-2.179-.238-.573-.479-.496-.659-.505-.17-.008-.366-.01-.562-.01-.196 0-.514.074-.783.369-.269.294-1.027 1.007-1.027 2.459 0 1.452 1.054 2.853 1.202 3.049.147.196 2.074 3.167 5.025 4.44.702.302 1.25.483 1.677.619.706.224 1.349.193 1.856.117.565-.085 1.743-.712 1.988-1.401.244-.689.244-1.278.17-1.402-.073-.123-.269-.196-.563-.343z"/>
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.006 5.219 5.232.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.198 2.203 3.405 5.126 3.402 8.232-.006 6.425-5.232 11.644-11.64 11.644-2.007-.001-3.982-.519-5.734-1.505L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.236 0 9.5-4.267 9.504-9.506.002-2.538-.987-4.925-2.787-6.726-1.8-1.801-4.19-2.793-6.729-2.793-5.245 0-9.512 4.268-9.517 9.507-.002 1.706.45 3.374 1.309 4.841L1.93 22.125l4.717-1.971zm10.598-6.136c-.294-.147-1.743-.86-2.012-.958-.269-.099-.465-.147-.659.148-.196.294-.753.958-.923 1.153-.17.196-.341.221-.635.074-1.8-.902-2.96-1.517-4.13-3.525-.31-.533.31-.495.89-1.646.099-.197.049-.369-.025-.517-.073-.148-.659-1.591-.903-2.179-.238-.573-.479-.496-.659-.505-.17-.008-.366-.01-.562-.01-.196 0-.514.074-.783.369-.269.294-1.027 1.007-1.027 2.459 0 1.452 1.054 2.853 1.202 3.049.147.196 2.074 3.167 5.025 4.44.702.302 1.25.483 1.677.619.706.224 1.349.193 1.856.117.565-.085 1.743-.712 1.988-1.401.244-.689.244-1.278.17-1.402-.073-.123-.269-.196-.563-.343z"/>
                     </svg>
-                    </div>
-                    <div class="text-left">
+                  </div>
+                  <div class="text-left">
                     <span class="block text-xs text-emerald-200">Hubungi Sekarang</span>
                     <span class="font-bold text-lg">Mulai Chat WhatsApp</span>
-                    </div>
+                  </div>
                 </div>
                 <svg class="w-5 h-5 transform group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </a>
@@ -426,5 +414,7 @@
       </main>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    <script src="/src/api.js"></script>
   </body>
 </html>
